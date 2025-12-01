@@ -20,6 +20,11 @@ import capregsoftLogo from './assets/aleena_assets/capregsoft.png';
 import liveClockPic from './assets/aleena_assets/live clock.png';
 import portfolioPic from './assets/aleena_assets/aleena-portfolio-website.png';
 
+// Import education images
+import fgPgCollegeImg from './assets/education/fg pg college.jpeg';
+import baseCollegeImg from './assets/education/base college.jpeg';
+import fgSchoolImg from './assets/education/fg school no 7.jpeg';
+
 
 export const SkillsInfo = [
   {
@@ -65,7 +70,7 @@ export const experiences = [
 export const education = [
   {
     id: 0,
-    img: "/videos/fg pg college.jpeg",
+    img: fgPgCollegeImg,
     school: "FG PG College (Affiliated with Punjab University)",
     date: "Present",
     grade: "CGPA 3.48",
@@ -74,7 +79,7 @@ export const education = [
   },
   {
     id: 1,
-    img: "/videos/base college.jpeg",
+    img: baseCollegeImg,
     school: "Base College, Wah Cantt (FBISE)",
     date: "Completed",
     grade: "858/1100",
@@ -83,7 +88,7 @@ export const education = [
   },
   {
     id: 2,
-    img: "/videos/fg school no 7.jpeg",
+    img: fgSchoolImg,
     school: "FG School No. 7 (FBISE)",
     date: "Completed",
     grade: "958/1100",

@@ -46,13 +46,17 @@ const About = () => {
             and machine learning applications for malware detection. Proficient in HTML, CSS, JavaScript,
             Python, and PowerBI, I love creating innovative solutions to real-world problems.
           </p>
-          {/* Contact Email */}
+          {/* Contact Button */}
           <a
-            href="mailto:aleenamalik12354@gmail.com"
+            href="#contact"
             className="inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold transition duration-300 transform hover:scale-105"
             style={{
               background: 'linear-gradient(90deg, #8245ec, #a855f7)',
               boxShadow: '0 0 2px #8245ec, 0 0 2px #8245ec, 0 0 40px #8245ec',
+            }}
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
             }}
           >
             CONTACT ME
