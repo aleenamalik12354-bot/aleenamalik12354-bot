@@ -1,17 +1,24 @@
 import React from 'react';
 import ReactTypingEffect from 'react-typing-effect';
 import Tilt from 'react-parallax-tilt';
+import { motion } from 'framer-motion';
 import profileImage from '../../assets/aleena_assets/aleena picture.jpg';
 
 const About = () => {
   return (
     <section
       id="about"
-      className="py-4 px-[7vw] md:px-[7vw] lg:px-[20vw] font-sans mt-16 md:mt-24 lg:mt-32"
+      className="py-4 px-[7vw] md:px-[7vw] lg:px-[20vw] font-sans pt-32 md:pt-40"
     >
-      <div className="flex flex-col-reverse md:flex-row justify-between items-center">
+      <div className="flex flex-col md:flex-row justify-between items-center gap-10 md:gap-0">
         {/* Left Side */}
-        <div className="md:w-1/2 text-center md:text-left mt-8 md:mt-0">
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1.0] }}
+          viewport={{ once: true, amount: 0.3 }}
+          className="md:w-1/2 text-center md:text-left"
+        >
           {/* Greeting */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2 leading-tight">
             Hi, I am
@@ -25,6 +32,7 @@ const About = () => {
             <span className="text-white">I am a </span>
             <ReactTypingEffect
               text={[
+                'Full Stack Web Developer',
                 'Web Developer',
                 'Data Analyst',
                 'Machine Learning Engineer',
@@ -47,9 +55,12 @@ const About = () => {
             Python, and PowerBI, I love creating innovative solutions to real-world problems.
           </p>
           {/* Contact Button */}
-          <a
+          <motion.a
             href="#contact"
-            className="inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold transition duration-300 transform hover:scale-105"
+            whileHover={{ scale: 1.05, boxShadow: "0 0 20px #8245ec" }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            className="inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold transition duration-300"
             style={{
               background: 'linear-gradient(90deg, #8245ec, #a855f7)',
               boxShadow: '0 0 2px #8245ec, 0 0 2px #8245ec, 0 0 40px #8245ec',
@@ -60,13 +71,32 @@ const About = () => {
             }}
           >
             CONTACT ME
-          </a>
-
-        </div>
+          </motion.a>
+        </motion.div>
         {/* Right Side */}
-        <div className="md:w-1/2 flex justify-center md:justify-end">
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1.0], delay: 0.2 }}
+          viewport={{ once: true, amount: 0.3 }}
+          className="md:w-1/2 flex justify-center md:justify-end relative z-10"
+        >
+          {/* Pulsing Glow Effect */}
+          <motion.div
+            animate={{
+              scale: [1, 1.2, 1],
+              opacity: [0.5, 0.8, 0.5],
+            }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-purple-600/40 rounded-full blur-[80px] -z-10"
+          />
+
           <Tilt
-            className="w-48 h-48 sm:w-64 sm:h-64 md:w-[30rem] md:h-[30rem] border-4 border-purple-700 rounded-full"
+            className="w-64 h-64 sm:w-80 sm:h-80 md:w-[28rem] md:h-[28rem] border-4 border-purple-700 rounded-full relative"
             tiltMaxAngleX={20}
             tiltMaxAngleY={20}
             perspective={1000}
@@ -77,10 +107,10 @@ const About = () => {
             <img
               src={profileImage}
               alt="Aleena Malik"
-              className="w-full h-full rounded-full object-cover drop-shadow-[0_10px_20px_rgba(130,69,236,0.5)]"
+              className="w-full h-full rounded-full object-cover object-[50%_20%] drop-shadow-[0_10px_20px_rgba(130,69,236,0.5)]"
             />
           </Tilt>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

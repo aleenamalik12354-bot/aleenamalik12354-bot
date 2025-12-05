@@ -2,14 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body, #root {
+html,
+body {
   height: 100%;
 }
 
+#root {
+  min-height: 100%;
+}
+
 .bg-skills-gradient {
-  background: radial-gradient(1200px circle at 10% 10%, rgba(130,69,236,0.15), transparent 40%),
-              radial-gradient(800px circle at 90% 30%, rgba(20,184,166,0.12), transparent 40%),
-              linear-gradient(180deg, rgba(5,4,20,1) 0%, rgba(5,4,20,0.9) 100%);
+  background: radial-gradient(1200px circle at 10% 10%, rgba(130, 69, 236, 0.15), transparent 40%),
+    radial-gradient(800px circle at 90% 30%, rgba(20, 184, 166, 0.12), transparent 40%),
+    rgba(5, 4, 20, 0.5);
 }
 
 .clip-path-custom {
@@ -18,4 +23,25 @@ html, body, #root {
 
 .clip-path-custom-3 {
   clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
 }

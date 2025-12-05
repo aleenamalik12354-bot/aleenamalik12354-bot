@@ -58,11 +58,11 @@ export const SkillsInfo = [
 export const experiences = [
   {
     id: 0,
-    img: aleenaProfile,
-    role: "Student",
+    img: "videos/capregsoft_logo_pic.png",
+    role: "Full Stack Web Developer Trainee",
     company: "Capregsoft",
-    date: "Present",
-    desc: "Working on various projects including Web Development and Machine Learning.",
+    date: "1 Month Training",
+    desc: "Completed intensive 1-month training in Full Stack Web Development, gaining hands-on experience with modern web technologies.",
     skills: ["HTML", "CSS", "Python", "PowerBI"],
   },
 ];
@@ -106,7 +106,7 @@ export const projects = [
     tags: ["Web Development", "Database"],
     github: "https://github.com/aleenamalik12354-bot/result-managment-system",
     webapp: "https://aleenamalik12354-bot.github.io/result-managment-system/",
-    video: "/videos/BS-IT Result Management System - Google Chrome 2025-11-27 20-51-57.mp4",
+    video: "videos/result_system.mp4",
   },
   {
     id: 1,
@@ -116,7 +116,7 @@ export const projects = [
     tags: ["HTML", "CSS", "JS"],
     github: "https://github.com/aleenamalik12354-bot/college-website",
     webapp: "https://aleenamalik12354-bot.github.io/college-website/",
-    video: "/videos/F.G Post Graduate College for Women _ Wah Cantt - Google Chrome 2025-11-27 20-48-53.mp4",
+    video: "videos/college_website.mp4",
   },
   {
     id: 2,
@@ -126,7 +126,7 @@ export const projects = [
     tags: ["Machine Learning", "Python"],
     github: "https://github.com/aleenamalik12354-bot/malware-project",
     webapp: "https://aleenamalik12354-bot.github.io/malware-project/",
-    video: "/videos/malware detection.mp4",
+    video: "videos/malware_detection.mp4",
   },
   {
     id: 3,
@@ -136,7 +136,7 @@ export const projects = [
     tags: ["PowerBI", "Data Analysis"],
     github: "https://github.com/aleenamalik12354-bot/POWER-BI-PROJECT",
     webapp: "https://aleenamalik12354-bot.github.io/POWER-BI-PROJECT/",
-    video: "/videos/dashboard.mp4",
+    video: "videos/dashboard.mp4",
   },
   {
     id: 4,
@@ -146,7 +146,7 @@ export const projects = [
     tags: ["ReactJS", "CSS"],
     github: "https://github.com/aleenamalik12354-bot/live-clock",
     webapp: "https://aleenamalik12354-bot.github.io/live-clock/",
-    video: "/videos/live_clock.mp4",
+    video: "videos/live_clock.mp4",
   },
   {
     id: 5,
@@ -156,6 +156,6 @@ export const projects = [
     tags: ["ReactJS", "TailwindCSS"],
     github: "https://github.com/aleenamalik12354-bot/Aleena-malil-portfolio-website",
     webapp: "https://aleenamalik12354-bot.github.io/Aleena-malil-portfolio-website/",
-    video: "/videos/aleena_portfolio.mp4",
+    video: "videos/aleena_portfolio.mp4",
   },
 ];

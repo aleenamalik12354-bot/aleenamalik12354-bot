@@ -3,120 +3,86 @@ import React from "react";
 import { SkillsInfo } from "../../constants";
 
 const Skills = () => {
-  // Circular progress component
-  const CircularProgress = ({ percentage, name }) => {
-    const radius = 45;
-    const circumference = 2 * Math.PI * radius;
-    const offset = circumference - (percentage / 100) * circumference;
-
-    return (
-      <div className="flex flex-col items-center">
-        <div className="relative w-28 h-28">
-          <svg className="transform -rotate-90 w-28 h-28">
-            {/* Background circle */}
-            <circle
-              cx="56"
-              cy="56"
-              r={radius}
-              stroke="#374151"
-              strokeWidth="8"
-              fill="none"
-            />
-            {/* Progress circle */}
-            <circle
-              cx="56"
-              cy="56"
-              r={radius}
-              stroke="#8245ec"
-              strokeWidth="8"
-              fill="none"
-              strokeDasharray={circumference}
-              strokeDashoffset={offset}
-              strokeLinecap="round"
-              className="transition-all duration-1000"
-            />
-          </svg>
-          <div className="absolute inset-0 flex items-center justify-center">
-            <span className="text-xl font-bold text-white">{percentage}%</span>
-          </div>
-        </div>
-        <p className="mt-3 text-sm text-gray-300 font-semibold">{name}</p>
-      </div>
-    );
-  };
-
-  // Progress bar component
-  const ProgressBar = ({ percentage, name }) => {
-    return (
-      <div className="mb-6">
-        <div className="flex justify-between mb-2">
-          <span className="text-base font-medium text-gray-300">{name}</span>
-          <span className="text-sm font-medium text-gray-400">{percentage}%</span>
-        </div>
-        <div className="w-full bg-gray-700 rounded-full h-3">
-          <div
-            className="bg-gradient-to-r from-purple-600 to-purple-400 h-3 rounded-full transition-all duration-1000"
-            style={{ width: `${percentage}%` }}
-          ></div>
-        </div>
-      </div>
-    );
-  };
+  // Flatten all skills from different categories into a single array
+  const allSkills = SkillsInfo.flatMap((category) => category.skills);
 
   return (
     <section
       id="skills"
-      className="py-24 pb-24 px-[12vw] md:px-[7vw] lg:px-[20vw] font-sans bg-skills-gradient clip-path-custom"
+      className="py-20 relative overflow-hidden"
     >
       {/* Section Title */}
-      <div className="text-center mb-12">
-        <h2 className="text-3xl sm:text-4xl font-bold text-white">MY SKILLS</h2>
-        <div className="w-24 h-1 bg-[#8245ec] mx-auto mt-2"></div>
-        <p className="text-gray-400 mt-4 text-lg font-semibold">
-          A collection of my technical skills and expertise honed through various projects and experiences
+      <div className="text-center mb-16 relative z-10 px-4">
+        <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+          My <span className="text-[#8245ec]">Skills</span>
+        </h2>
+        <p className="text-gray-400 max-w-2xl mx-auto text-base sm:text-lg">
+          Technologies and tools I work with to build immersive web experiences.
         </p>
+        <div className="w-24 h-1 bg-[#8245ec] mx-auto mt-4 rounded-full"></div>
       </div>
 
-      {/* Skills Container */}
-      <div className="flex flex-col lg:flex-row gap-10 py-10">
-        {SkillsInfo.map((category) => (
-          <div
-            key={category.title}
-            className={`bg-gray-900 backdrop-blur-md px-8 py-10 rounded-2xl border border-white shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] ${category.type === 'bar' ? 'lg:w-[60%]' : 'lg:w-[40%]'
-              }`}
-          >
-            <h3 className="text-2xl sm:text-3xl font-semibold text-[#8245ec] mb-8 text-center">
-              {category.title}
-            </h3>
+      {/* Marquee Container */}
+      <div className="relative w-full overflow-hidden py-10 bg-gradient-to-r from-transparent via-white/5 to-transparent backdrop-blur-sm group">
+        {/* Gradient Masks */}
+        <div className="absolute top-0 left-0 w-20 sm:w-32 h-full bg-gradient-to-r from-[#050414] to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-20 sm:w-32 h-full bg-gradient-to-l from-[#050414] to-transparent z-10 pointer-events-none"></div>
 
-            {/* Render based on type */}
-            {category.type === 'bar' ? (
-              <div className="space-y-2">
-                {category.skills.map((skill) => (
-                  <ProgressBar
-                    key={skill.name}
-                    name={skill.name}
-                    percentage={skill.percentage}
-                  />
-                ))}
+        {/* Single Marquee Track with Duplicated Content */}
+        <div className="flex w-max animate-marquee group-hover:[animation-play-state:paused]">
+          {/* Original Set */}
+          {allSkills.map((skill, index) => (
+            <div
+              key={`s1-${index}`}
+              className="flex flex-col items-center justify-center gap-4 mx-8 sm:mx-12 min-w-[100px] cursor-pointer"
+            >
+              <div className="w-20 h-20 sm:w-24 sm:h-24 bg-[#1a1a2e] rounded-xl flex items-center justify-center border border-[#8245ec]/30 hover:border-[#8245ec] hover:shadow-[0_0_15px_rgba(130,69,236,0.5)] transition-all duration-300 relative overflow-hidden group/item">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#8245ec]/10 to-transparent opacity-100 transition-opacity duration-300"></div>
+                <img
+                  src={skill.logo}
+                  alt={skill.name}
+                  className="w-10 h-10 sm:w-12 sm:h-12 object-contain transition-all duration-300 transform group-hover/item:scale-110"
+                />
               </div>
-            ) : (
-              <div className="grid grid-cols-2 gap-8 justify-items-center">
-                {category.skills.map((skill) => (
-                  <CircularProgress
-                    key={skill.name}
-                    name={skill.name}
-                    percentage={skill.percentage}
-                  />
-                ))}
+              <span className="text-gray-400 font-medium text-sm sm:text-base group-hover:text-[#8245ec] transition-colors duration-300">
+                {skill.name}
+              </span>
+            </div>
+          ))}
+          {/* Duplicated Set for Seamless Loop */}
+          {allSkills.map((skill, index) => (
+            <div
+              key={`s2-${index}`}
+              className="flex flex-col items-center justify-center gap-4 mx-8 sm:mx-12 min-w-[100px] cursor-pointer"
+            >
+              <div className="w-20 h-20 sm:w-24 sm:h-24 bg-[#1a1a2e] rounded-xl flex items-center justify-center border border-[#8245ec]/30 hover:border-[#8245ec] hover:shadow-[0_0_15px_rgba(130,69,236,0.5)] transition-all duration-300 relative overflow-hidden group/item">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#8245ec]/10 to-transparent opacity-100 transition-opacity duration-300"></div>
+                <img
+                  src={skill.logo}
+                  alt={skill.name}
+                  className="w-10 h-10 sm:w-12 sm:h-12 object-contain transition-all duration-300 transform group-hover/item:scale-110"
+                />
               </div>
-            )}
-          </div>
-        ))}
+              <span className="text-gray-400 font-medium text-sm sm:text-base group-hover:text-[#8245ec] transition-colors duration-300">
+                {skill.name}
+              </span>
+            </div>
+          ))}
+        </div>
       </div>
+
+      {/* Styles for animation */}
+      <style>{`
+        @keyframes marquee {
+          0% { transform: translateX(0%); }
+          100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+          animation: marquee 25s linear infinite;
+        }
+      `}</style>
     </section>
   );
 };
 
 export default Skills;
-

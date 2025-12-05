@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { projects } from "../../constants";
+import { motion } from "framer-motion";
 
 const Work = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -15,58 +16,130 @@ const Work = () => {
   return (
     <section
       id="work"
-      className="py-24 pb-24 px-[12vw] md:px-[7vw] lg:px-[20vw] font-sans relative"
+      className="py-24 pb-24 px-0 font-sans relative overflow-hidden"
     >
       {/* Section Title */}
-      <div className="text-center mb-16">
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1.0] }}
+        viewport={{ once: true, amount: 0.3 }}
+        className="text-center mb-16 px-[7vw]"
+      >
         <h2 className="text-4xl font-bold text-white">PROJECTS</h2>
         <div className="w-32 h-1 bg-purple-500 mx-auto mt-4"></div>
         <p className="text-gray-400 mt-4 text-lg font-semibold">
           Here are some of my projects
         </p>
-      </div>
+      </motion.div>
 
-      {/* Projects Grid */}
-      <div className="grid gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
-        {projects.map((project) => (
-          <div
-            key={project.id}
-            onClick={() => handleOpenModal(project)}
-            className="border border-white bg-gray-900 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden cursor-pointer hover:shadow-purple-500/50 hover:-translate-y-2 transition-transform duration-300"
-          >
-            <div className="p-4">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-64 object-cover rounded-xl"
-              />
-            </div>
-            <div className="p-6">
-              <h3 className="text-2xl font-bold text-white mb-2">
-                {project.title}
-              </h3>
-              <p className="text-gray-500 mb-2 pt-2 line-clamp-3">
-                {project.description}
-              </p>
-              <div className="flex flex-wrap gap-2 mt-2">
-                {project.tags.map((tag, index) => (
-                  <span
-                    key={index}
-                    className="text-xs bg-purple-900 text-purple-200 px-2 py-1 rounded-full"
-                  >
-                    {tag}
-                  </span>
-                ))}
+      {/* Projects Marquee */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1.5, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.1 }}
+        className="relative w-full overflow-hidden py-10 group"
+      >
+        {/* Gradient Masks */}
+        <div className="absolute top-0 left-0 w-20 sm:w-32 h-full bg-gradient-to-r from-[#050414] to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-20 sm:w-32 h-full bg-gradient-to-l from-[#050414] to-transparent z-10 pointer-events-none"></div>
+
+        {/* Marquee Track */}
+        <div className="flex w-max animate-marquee group-hover:[animation-play-state:paused] will-change-transform">
+          {/* Original Projects */}
+          {projects.map((project) => (
+            <motion.div
+              key={`p1-${project.id}`}
+              onClick={() => handleOpenModal(project)}
+              whileHover={{ scale: 1.05, y: -10, boxShadow: "0 20px 30px -10px rgba(130, 69, 236, 0.5)" }}
+              transition={{ type: "spring", stiffness: 200, damping: 20 }}
+              className="mx-6 w-[350px] md:w-[400px] border border-white bg-gray-900 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden cursor-pointer flex-shrink-0"
+            >
+              <div className="p-4">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-48 object-cover rounded-xl"
+                />
               </div>
-            </div>
-          </div>
-        ))}
-      </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-white mb-2 truncate">
+                  {project.title}
+                </h3>
+                <p className="text-gray-500 mb-2 pt-2 line-clamp-2 text-sm">
+                  {project.description}
+                </p>
+                <div className="flex flex-wrap gap-2 mt-2">
+                  {project.tags.map((tag, index) => (
+                    <span
+                      key={index}
+                      className="text-xs bg-purple-900 text-purple-200 px-2 py-1 rounded-full"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          ))}
+          {/* Duplicated Projects */}
+          {projects.map((project) => (
+            <motion.div
+              key={`p2-${project.id}`}
+              onClick={() => handleOpenModal(project)}
+              whileHover={{ scale: 1.05, y: -10, boxShadow: "0 20px 30px -10px rgba(130, 69, 236, 0.5)" }}
+              transition={{ type: "spring", stiffness: 200, damping: 20 }}
+              className="mx-6 w-[350px] md:w-[400px] border border-white bg-gray-900 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden cursor-pointer flex-shrink-0"
+            >
+              <div className="p-4">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-48 object-cover rounded-xl"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-white mb-2 truncate">
+                  {project.title}
+                </h3>
+                <p className="text-gray-500 mb-2 pt-2 line-clamp-2 text-sm">
+                  {project.description}
+                </p>
+                <div className="flex flex-wrap gap-2 mt-2">
+                  {project.tags.map((tag, index) => (
+                    <span
+                      key={index}
+                      className="text-xs bg-purple-900 text-purple-200 px-2 py-1 rounded-full"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
+
+      {/* Styles for animation */}
+      <style>{`
+        @keyframes marquee {
+          0% { transform: translateX(0%); }
+          100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+          animation: marquee 50s linear infinite;
+        }
+      `}</style>
 
       {/* Modal Container */}
       {selectedProject && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90 p-4">
-          <div className="bg-gray-900 rounded-xl shadow-2xl lg:w-full w-[90%] max-w-4xl overflow-hidden relative max-h-[90vh] overflow-y-auto">
+          <div
+            data-lenis-prevent
+            className="bg-gray-900 rounded-xl shadow-2xl lg:w-full w-[90%] max-w-4xl overflow-hidden relative max-h-[90vh] overflow-y-auto"
+          >
             <div className="flex justify-end p-4">
               <button
                 onClick={handleCloseModal}
@@ -81,11 +154,12 @@ const Work = () => {
               {selectedProject.video && (
                 <div className="w-full flex justify-center bg-black px-4 pb-6">
                   <video
+                    key={selectedProject.video}
                     controls
                     className="lg:w-full w-[95%] rounded-xl shadow-2xl"
                     style={{ maxHeight: '500px' }}
                   >
-                    <source src={selectedProject.video} type="video/mp4" />
+                    <source src={`${import.meta.env.BASE_URL}${selectedProject.video}`} type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
                 </div>
