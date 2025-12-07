@@ -25,24 +25,12 @@
 
   ---
 
-  ### 🛠️ Languages and Tools
-  <div align="center">
-    <!-- Frontend -->
-    <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
-    <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
-    <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" />
-    <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
-    <br/>
-    <!-- Backend -->
-    <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" />
-    <img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge" />
-    <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" />
-    <br/>
-    <!-- Tools -->
-    <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
-    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" />
-    <img src="https://img.shields.io/badge/VS_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white" />
-  </div>
+  ### ⚡ Tech Stack & Skills
+
+  | **Frontend** | **Backend** | **Tools & Others** |
+  |:---:|:---:|:---:|
+  | <img src="https://img.shields.io/badge/React-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" /> <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" /> | <img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white" /> <img src="https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB" /> | <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" /> <img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" /> |
+  | <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" /> <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" /> | <img src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white" /> | <img src="https://img.shields.io/badge/Responsive_Design-008080?style=for-the-badge" /> |
 
   ---
 
@@ -50,7 +38,7 @@
 
   | **Role** | **Organization** | **Duration** | **Description** |
   |:---:|:---:|:---:|:---|
-  | **Full Stack Web Developer Trainee** | **Capregsoft** | `1 Month Training` | Completed intensive 1-month training in Full Stack Web Development, gaining hands-on experience with modern web technologies like `HTML`, `CSS`, `Python`, and `PowerBI`. |
+  | **Full Stack Web Developer Trainee** | **Capregsoft** | `1 Month Training` | Completed intensive 1-month training in Full Stack Web Development. Gained hands-on experience by building projects using: <br /> `React`, `JavaScript`, `HTML5`, `CSS3`, `Node.js`, `Express.js`, `MongoDB` |
   | **AI Machine Learning Course** | **NAVTTC** | `Certification` | Completed comprehensive training in Artificial Intelligence, Machine Learning, and Business Intelligence. Gained expertise in `AI`, `Machine Learning`, `Python`, and `Data Analysis`. |
 
   ---
