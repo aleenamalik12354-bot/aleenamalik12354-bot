@@ -46,6 +46,15 @@
 
   ---
 
+  ### 💼 Experience
+
+  | **Role** | **Organization** | **Duration** | **Description** |
+  |:---:|:---:|:---:|:---|
+  | **Full Stack Web Developer Trainee** | **Capregsoft** | `1 Month Training` | Completed intensive 1-month training in Full Stack Web Development, gaining hands-on experience with modern web technologies like `HTML`, `CSS`, `Python`, and `PowerBI`. |
+  | **AI Machine Learning Course** | **NAVTTC** | `Certification` | Completed comprehensive training in Artificial Intelligence, Machine Learning, and Business Intelligence. Gained expertise in `AI`, `Machine Learning`, `Python`, and `Data Analysis`. |
+
+  ---
+
   ### 🌟 My Projects
 
   | **Project** | **Description** | **Tech Stack** |
