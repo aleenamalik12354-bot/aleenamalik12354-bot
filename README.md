@@ -46,13 +46,16 @@
 
   ---
 
-  ### 🌟 Featured Projects
+  ### 🌟 My Projects
 
   | **Project** | **Description** | **Tech Stack** |
   |:---:|:---:|:---:|
   | **[Result Management System](https://github.com/aleenamalik12354-bot/result-managment-system)** | A comprehensive system to manage student results efficiently. | `Web Dev`, `Database` |
-  | **[Live Clock](https://github.com/aleenamalik12354-bot/live-clock)** | Real-time digital and analog clock with dynamic theming. | `ReactJS`, `CSS` |
   | **[College Website](https://github.com/aleenamalik12354-bot/college-website)** | Official website design for FG PG College. | `HTML`, `CSS`, `JS` |
+  | **[Malware Detection](https://github.com/aleenamalik12354-bot/malware-project)** | Machine Learning project for malware detection. | `Machine Learning`, `Python` |
+  | **[PowerBI Dashboard](https://github.com/aleenamalik12354-bot/POWER-BI-PROJECT)** | Data visualization dashboard using PowerBI. | `PowerBI`, `Data Analysis` |
+  | **[Live Clock](https://github.com/aleenamalik12354-bot/live-clock)** | Real-time digital and analog clock with dynamic theming. | `ReactJS`, `CSS` |
+  | **[Aleena Portfolio Website](https://github.com/aleenamalik12354-bot/Aleena-malil-portfolio-website)** | Personal portfolio website showcasing projects and skills. | `ReactJS`, `TailwindCSS` |
 
   > Check out more of my work in my [Portfolio](https://aleena-malik-portfolio-5dv6.vercel.app)!
 
