@@ -117,7 +117,7 @@ export const projects = [
     tags: ["Web Development", "Database"],
     github: "https://github.com/aleenamalik12354-bot/result-managment-system",
     webapp: "https://aleenamalik12354-bot.github.io/result-managment-system/",
-    video: "videos/result_system.mp4",
+    video: "newvideos/BS-IT Result Management System - Google Chrome 2025-11-27 20-51-57.mp4",
   },
   {
     id: 1,
@@ -127,7 +127,7 @@ export const projects = [
     tags: ["HTML", "CSS", "JS"],
     github: "https://github.com/aleenamalik12354-bot/college-website",
     webapp: "https://aleenamalik12354-bot.github.io/college-website/",
-    video: "videos/college_website.mp4",
+    video: "newvideos/F.G Post Graduate College for Women _ Wah Cantt - Google Chrome 2025-11-27 20-48-53.mp4",
   },
   {
     id: 2,
@@ -137,7 +137,7 @@ export const projects = [
     tags: ["Machine Learning", "Python"],
     github: "https://github.com/aleenamalik12354-bot/malware-project",
     webapp: "https://aleenamalik12354-bot.github.io/malware-project/",
-    video: "videos/malware_detection.mp4",
+    video: "newvideos/malware detection.mp4",
   },
   {
     id: 3,
@@ -147,7 +147,7 @@ export const projects = [
     tags: ["PowerBI", "Data Analysis"],
     github: "https://github.com/aleenamalik12354-bot/POWER-BI-PROJECT",
     webapp: "https://aleenamalik12354-bot.github.io/POWER-BI-PROJECT/",
-    video: "videos/dashboard.mp4",
+    video: "newvideos/dashboard.mp4",
   },
   {
     id: 4,
@@ -157,7 +157,7 @@ export const projects = [
     tags: ["ReactJS", "CSS"],
     github: "https://github.com/aleenamalik12354-bot/live-clock",
     webapp: "https://aleenamalik12354-bot.github.io/live-clock/",
-    video: "videos/live_clock.mp4",
+    video: "newvideos/live_clock.mp4",
   },
   {
     id: 5,
@@ -167,6 +167,6 @@ export const projects = [
     tags: ["ReactJS", "TailwindCSS"],
     github: "https://github.com/aleenamalik12354-bot/Aleena-malil-portfolio-website",
     webapp: "https://aleenamalik12354-bot.github.io/Aleena-malil-portfolio-website/",
-    video: "videos/aleena_portfolio.mp4",
+    video: "newvideos/aleena_portfolio.mp4",
   },
 ];

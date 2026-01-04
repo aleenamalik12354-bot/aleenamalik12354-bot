@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactTypingEffect from 'react-typing-effect';
 import Tilt from 'react-parallax-tilt';
 import { motion } from 'framer-motion';
 import profileImage from '../../assets/aleena_assets/aleena_picture.jpg';
+import CVModal from '../CVModal/CVModal';
 
 const About = () => {
+  const [isCVModalOpen, setIsCVModalOpen] = useState(false);
   return (
     <section
       id="about"
@@ -74,17 +76,15 @@ const About = () => {
               CONTACT ME
             </motion.a>
 
-            <motion.a
-              href="/aleena%20CV.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
+            <motion.button
+              onClick={() => setIsCVModalOpen(true)}
               whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(130, 69, 236, 0.5)" }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
               className="inline-block text-white py-3 px-8 rounded-full text-lg font-bold transition duration-300 border-2 border-[#8245ec] bg-transparent hover:bg-[#8245ec]/10"
             >
               VIEW CV
-            </motion.a>
+            </motion.button>
           </div>
         </motion.div>
         {/* Right Side */}
@@ -128,6 +128,9 @@ const About = () => {
           </Tilt>
         </motion.div>
       </div>
+
+      {/* CV Modal */}
+      <CVModal isOpen={isCVModalOpen} onClose={() => setIsCVModalOpen(false)} />
     </section>
   );
 };
