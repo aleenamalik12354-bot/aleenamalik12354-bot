@@ -5,7 +5,7 @@
 ## 🚀 Full Stack Developer | Frontend & Backend Specialist
 
 [![Portfolio](https://img.shields.io/badge/Start_Portfolio_Website-FF5722?style=for-the-badge&logo=vercel&logoColor=white)](https://aleenamalik12354-bot-bfcb.vercel.app)
-[![LinkedIn](https://img.shields.io/badge/Connect_on_LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aleena-malik)
+[![LinkedIn](https://img.shields.io/badge/Connect_on_LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aleena-malik-464914399/)
 [![Email](https://img.shields.io/badge/Email_Me-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:aleenamalik12354@gmail.com)
 
 </div>
