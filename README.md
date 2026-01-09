@@ -42,7 +42,16 @@ A modern, interactive portfolio website built with React, Tailwind CSS, and Fram
 
 ## 🌐 Deployment
 
-This project is configured for deployment on GitHub Pages.
+This project is deployed on **Vercel** for optimal performance and automatic deployments.
+
+**Live URL:** [https://aleena-malik-portfolio-5dv6.vercel.app](https://aleena-malik-portfolio-5dv6.vercel.app)
+
+### Deploy Your Own
+
+1. Fork this repository
+2. Sign up on [Vercel](https://vercel.com)
+3. Import your forked repository
+4. Vercel will automatically detect Vite and deploy your portfolio
 
 ## 📬 Contact
 
