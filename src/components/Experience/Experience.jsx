@@ -83,7 +83,11 @@ const Experience = () => {
 
             {/* Content Section */}
             <div
+<<<<<<< HEAD
               className={`w-full sm:max-w-md p-6 sm:p-8 rounded-2xl border-2 border-[#8245ec]/50 hover:border-[#8245ec] bg-white/5 backdrop-blur-lg shadow-[0_0_15px_rgba(130,69,236,0.15)] hover:shadow-[0_0_30px_rgba(130,69,236,0.4)] transition-all duration-300 group ${index % 2 === 0 ? "sm:mr-auto sm:text-right" : "sm:ml-auto sm:text-left"
+=======
+              className={`w-full sm:max-w-md p-6 sm:p-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-lg shadow-xl hover:shadow-[0_0_30px_rgba(130,69,236,0.2)] transition-all duration-300 group ${index % 2 === 0 ? "sm:mr-auto sm:text-right" : "sm:ml-auto sm:text-left"
+>>>>>>> aa12ded16b8f921e537f02996261c31526b98b20
                 } sm:w-[45%] ml-16 sm:ml-0`}
             >
               {/* Header */}

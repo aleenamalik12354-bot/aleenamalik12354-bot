@@ -9,6 +9,7 @@ const Navbar = () => {
 
   // Detect scroll and change navbar background
   useEffect(() => {
+<<<<<<< HEAD
     let ticking = false;
     const handleScroll = () => {
       if (!ticking) {
@@ -18,6 +19,10 @@ const Navbar = () => {
         });
         ticking = true;
       }
+=======
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+>>>>>>> aa12ded16b8f921e537f02996261c31526b98b20
     };
 
     window.addEventListener("scroll", handleScroll);

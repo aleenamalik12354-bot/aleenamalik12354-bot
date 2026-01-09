@@ -11,6 +11,7 @@ import pythonLogo from './assets/tech_logo/python.png';
 import bootstrapLogo from './assets/tech_logo/bootstrap.png';
 
 // Import Aleena's assets
+<<<<<<< HEAD
 import aleenaProfile from './assets/aleena_assets/aleena_picture.jpg';
 import collegePic from './assets/aleena_assets/college_website_picture.png';
 import dashboardPic from './assets/aleena_assets/dashboard_picture.png';
@@ -18,13 +19,28 @@ import malwarePic from './assets/aleena_assets/malware_project_pic.png';
 import resultPic from './assets/aleena_assets/result_picture.png';
 import capregsoftLogo from './assets/aleena_assets/capregsoft.png';
 import liveClockPic from './assets/aleena_assets/live_clock.png';
+=======
+import aleenaProfile from './assets/aleena_assets/aleena picture.jpg';
+import collegePic from './assets/aleena_assets/college website picture.png';
+import dashboardPic from './assets/aleena_assets/dashboard picture.png';
+import malwarePic from './assets/aleena_assets/malware project pic.png';
+import resultPic from './assets/aleena_assets/result picture.png';
+import capregsoftLogo from './assets/aleena_assets/capregsoft.png';
+import liveClockPic from './assets/aleena_assets/live clock.png';
+>>>>>>> aa12ded16b8f921e537f02996261c31526b98b20
 import portfolioPic from './assets/aleena_assets/aleena-portfolio-website.png';
 import navttcLogo from './assets/aleena_assets/navttc.png';
 
 // Import education images
+<<<<<<< HEAD
 import fgPgCollegeImg from './assets/education/fg_pg_college.jpeg';
 import baseCollegeImg from './assets/education/base_college.jpeg';
 import fgSchoolImg from './assets/education/fg_school_no_7.jpeg';
+=======
+import fgPgCollegeImg from './assets/education/fg pg college.jpeg';
+import baseCollegeImg from './assets/education/base college.jpeg';
+import fgSchoolImg from './assets/education/fg school no 7.jpeg';
+>>>>>>> aa12ded16b8f921e537f02996261c31526b98b20
 
 
 export const SkillsInfo = [
@@ -38,7 +54,11 @@ export const SkillsInfo = [
       { name: 'ReactJS', logo: reactjsLogo, percentage: 80 },
       { name: 'NodeJS', logo: nodejsLogo, percentage: 75 },
       { name: 'Python', logo: pythonLogo, percentage: 88 },
+<<<<<<< HEAD
 
+=======
+      { name: 'Java', logo: javaLogo, percentage: 82 },
+>>>>>>> aa12ded16b8f921e537f02996261c31526b98b20
       { name: 'C++', logo: cppLogo, percentage: 83 },
       { name: 'SQL', logo: mysqlLogo, percentage: 85 },
       { name: 'PowerBI', logo: htmlLogo, percentage: 90 }, // Using htmlLogo as placeholder if specific logo missing, or I can try to find powerbi logo
@@ -74,7 +94,11 @@ export const experiences = [
     company: "Capregsoft",
     date: "1 Month Training",
     desc: "Completed intensive 1-month training in Full Stack Web Development, gaining hands-on experience with modern web technologies.",
+<<<<<<< HEAD
     skills: ["HTML", "CSS", "JavaScript", "React", "Node.js", "Express.js", "MongoDB"],
+=======
+    skills: ["HTML", "CSS", "Python", "PowerBI"],
+>>>>>>> aa12ded16b8f921e537f02996261c31526b98b20
   },
 ];
 
@@ -117,7 +141,11 @@ export const projects = [
     tags: ["Web Development", "Database"],
     github: "https://github.com/aleenamalik12354-bot/result-managment-system",
     webapp: "https://aleenamalik12354-bot.github.io/result-managment-system/",
+<<<<<<< HEAD
     video: "newvideos/BS-IT Result Management System - Google Chrome 2025-11-27 20-51-57.mp4",
+=======
+    video: "videos/result_system.mp4",
+>>>>>>> aa12ded16b8f921e537f02996261c31526b98b20
   },
   {
     id: 1,
@@ -127,7 +155,11 @@ export const projects = [
     tags: ["HTML", "CSS", "JS"],
     github: "https://github.com/aleenamalik12354-bot/college-website",
     webapp: "https://aleenamalik12354-bot.github.io/college-website/",
+<<<<<<< HEAD
     video: "newvideos/F.G Post Graduate College for Women _ Wah Cantt - Google Chrome 2025-11-27 20-48-53.mp4",
+=======
+    video: "videos/college_website.mp4",
+>>>>>>> aa12ded16b8f921e537f02996261c31526b98b20
   },
   {
     id: 2,
@@ -137,7 +169,11 @@ export const projects = [
     tags: ["Machine Learning", "Python"],
     github: "https://github.com/aleenamalik12354-bot/malware-project",
     webapp: "https://aleenamalik12354-bot.github.io/malware-project/",
+<<<<<<< HEAD
     video: "newvideos/malware detection.mp4",
+=======
+    video: "videos/malware_detection.mp4",
+>>>>>>> aa12ded16b8f921e537f02996261c31526b98b20
   },
   {
     id: 3,
@@ -147,7 +183,11 @@ export const projects = [
     tags: ["PowerBI", "Data Analysis"],
     github: "https://github.com/aleenamalik12354-bot/POWER-BI-PROJECT",
     webapp: "https://aleenamalik12354-bot.github.io/POWER-BI-PROJECT/",
+<<<<<<< HEAD
     video: "newvideos/dashboard.mp4",
+=======
+    video: "videos/dashboard.mp4",
+>>>>>>> aa12ded16b8f921e537f02996261c31526b98b20
   },
   {
     id: 4,
@@ -157,7 +197,11 @@ export const projects = [
     tags: ["ReactJS", "CSS"],
     github: "https://github.com/aleenamalik12354-bot/live-clock",
     webapp: "https://aleenamalik12354-bot.github.io/live-clock/",
+<<<<<<< HEAD
     video: "newvideos/live_clock.mp4",
+=======
+    video: "videos/live_clock.mp4",
+>>>>>>> aa12ded16b8f921e537f02996261c31526b98b20
   },
   {
     id: 5,
@@ -167,6 +211,10 @@ export const projects = [
     tags: ["ReactJS", "TailwindCSS"],
     github: "https://github.com/aleenamalik12354-bot/Aleena-malil-portfolio-website",
     webapp: "https://aleenamalik12354-bot.github.io/Aleena-malil-portfolio-website/",
+<<<<<<< HEAD
     video: "newvideos/aleena_portfolio.mp4",
+=======
+    video: "videos/aleena_portfolio.mp4",
+>>>>>>> aa12ded16b8f921e537f02996261c31526b98b20
   },
 ];

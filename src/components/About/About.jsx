@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import ReactTypingEffect from 'react-typing-effect';
 import Tilt from 'react-parallax-tilt';
@@ -7,6 +8,15 @@ import CVModal from '../CVModal/CVModal';
 
 const About = () => {
   const [isCVModalOpen, setIsCVModalOpen] = useState(false);
+=======
+import React from 'react';
+import ReactTypingEffect from 'react-typing-effect';
+import Tilt from 'react-parallax-tilt';
+import { motion } from 'framer-motion';
+import profileImage from '../../assets/aleena_assets/aleena picture.jpg';
+
+const About = () => {
+>>>>>>> aa12ded16b8f921e537f02996261c31526b98b20
   return (
     <section
       id="about"
@@ -57,6 +67,7 @@ const About = () => {
             Python, and PowerBI, I love creating innovative solutions to real-world problems.
           </p>
           {/* Contact Button */}
+<<<<<<< HEAD
           <div className="flex flex-wrap gap-4 mt-8">
             <motion.a
               href="#contact"
@@ -86,6 +97,25 @@ const About = () => {
               VIEW CV
             </motion.button>
           </div>
+=======
+          <motion.a
+            href="#contact"
+            whileHover={{ scale: 1.05, boxShadow: "0 0 20px #8245ec" }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            className="inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold transition duration-300"
+            style={{
+              background: 'linear-gradient(90deg, #8245ec, #a855f7)',
+              boxShadow: '0 0 2px #8245ec, 0 0 2px #8245ec, 0 0 40px #8245ec',
+            }}
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+            }}
+          >
+            CONTACT ME
+          </motion.a>
+>>>>>>> aa12ded16b8f921e537f02996261c31526b98b20
         </motion.div>
         {/* Right Side */}
         <motion.div
@@ -116,9 +146,13 @@ const About = () => {
             perspective={1000}
             scale={1.05}
             transitionSpeed={1000}
+<<<<<<< HEAD
             gyroscope={false} // Disable gyroscope to save mobile battery and processing
             glareEnable={false} // Disable glare for performance
             tiltEnable={window.innerWidth > 768} // Conditional enable if window width check works here, but better handled via CSS or state if resizing. For now, gyroscope false is key.
+=======
+            gyroscope={true}
+>>>>>>> aa12ded16b8f921e537f02996261c31526b98b20
           >
             <img
               src={profileImage}
@@ -128,9 +162,12 @@ const About = () => {
           </Tilt>
         </motion.div>
       </div>
+<<<<<<< HEAD
 
       {/* CV Modal */}
       <CVModal isOpen={isCVModalOpen} onClose={() => setIsCVModalOpen(false)} />
+=======
+>>>>>>> aa12ded16b8f921e537f02996261c31526b98b20
     </section>
   );
 };

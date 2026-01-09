@@ -15,14 +15,24 @@ import Lenis from 'lenis';
 export default function App() {
   useEffect(() => {
     const lenis = new Lenis({
+<<<<<<< HEAD
       duration: 0.6, // Snappier scroll duration
+=======
+      duration: 0.8, // Faster scroll duration
+>>>>>>> aa12ded16b8f921e537f02996261c31526b98b20
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Smooth easing
       direction: 'vertical',
       gestureDirection: 'vertical',
       smooth: true,
+<<<<<<< HEAD
       mouseMultiplier: 1, // Standard responsiveness
       smoothTouch: false, // Default native feels better on mobile usually, keeping false is good
       touchMultiplier: 2, // Standard touch multiplier
+=======
+      mouseMultiplier: 1.5, // More responsive mouse wheel
+      smoothTouch: false,
+      touchMultiplier: 2.5, // Better touch scrolling
+>>>>>>> aa12ded16b8f921e537f02996261c31526b98b20
       infinite: false,
     });
 
