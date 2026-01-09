@@ -33,16 +33,11 @@ const Work = () => {
         </p>
       </motion.div>
 
-<<<<<<< HEAD
       {/* Projects Grid */}
-=======
-      {/* Projects Marquee */}
->>>>>>> aa12ded16b8f921e537f02996261c31526b98b20
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1, ease: "easeOut" }}
-<<<<<<< HEAD
         viewport={{ once: true, amount: 0.1 }}
         className="relative w-full max-w-7xl mx-auto px-4"
       >
@@ -54,61 +49,6 @@ const Work = () => {
               whileHover={{ scale: 1.05, y: -10, boxShadow: "0 20px 30px -10px rgba(130, 69, 236, 0.5)" }}
               transition={{ type: "spring", stiffness: 200, damping: 20 }}
               className="w-full max-w-[400px] border border-white bg-gray-900 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden cursor-pointer"
-=======
-        viewport={{ once: false, amount: 0.1 }}
-        className="relative w-full overflow-hidden py-10 group"
-      >
-        {/* Gradient Masks */}
-        <div className="absolute top-0 left-0 w-20 sm:w-32 h-full bg-gradient-to-r from-[#050414] to-transparent z-10 pointer-events-none"></div>
-        <div className="absolute top-0 right-0 w-20 sm:w-32 h-full bg-gradient-to-l from-[#050414] to-transparent z-10 pointer-events-none"></div>
-
-        {/* Marquee Track */}
-        <div className="flex w-max animate-marquee group-hover:[animation-play-state:paused] will-change-transform">
-          {/* Original Projects */}
-          {projects.map((project) => (
-            <motion.div
-              key={`p1-${project.id}`}
-              onClick={() => handleOpenModal(project)}
-              whileHover={{ scale: 1.05, y: -10, boxShadow: "0 20px 30px -10px rgba(130, 69, 236, 0.5)" }}
-              transition={{ type: "spring", stiffness: 200, damping: 20 }}
-              className="mx-6 w-[350px] md:w-[400px] border border-white bg-gray-900 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden cursor-pointer flex-shrink-0"
-            >
-              <div className="p-4">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-48 object-cover rounded-xl"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-2 truncate">
-                  {project.title}
-                </h3>
-                <p className="text-gray-500 mb-2 pt-2 line-clamp-2 text-sm">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-2 mt-2">
-                  {project.tags.map((tag, index) => (
-                    <span
-                      key={index}
-                      className="text-xs bg-purple-900 text-purple-200 px-2 py-1 rounded-full"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
-          ))}
-          {/* Duplicated Projects */}
-          {projects.map((project) => (
-            <motion.div
-              key={`p2-${project.id}`}
-              onClick={() => handleOpenModal(project)}
-              whileHover={{ scale: 1.05, y: -10, boxShadow: "0 20px 30px -10px rgba(130, 69, 236, 0.5)" }}
-              transition={{ type: "spring", stiffness: 200, damping: 20 }}
-              className="mx-6 w-[350px] md:w-[400px] border border-white bg-gray-900 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden cursor-pointer flex-shrink-0"
->>>>>>> aa12ded16b8f921e537f02996261c31526b98b20
             >
               <div className="p-4">
                 <img
@@ -140,8 +80,6 @@ const Work = () => {
         </div>
       </motion.div>
 
-<<<<<<< HEAD
-      {/* Modal Container */}
       {/* Modal Container */}
       {selectedProject && (
         <div
@@ -210,81 +148,6 @@ const Work = () => {
                       </a>
                     )}
                   </div>
-=======
-      {/* Styles for animation */}
-      <style>{`
-        @keyframes marquee {
-          0% { transform: translateX(0%); }
-          100% { transform: translateX(-50%); }
-        }
-        .animate-marquee {
-          animation: marquee 50s linear infinite;
-        }
-      `}</style>
-
-      {/* Modal Container */}
-      {selectedProject && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90 p-4">
-          <div
-            data-lenis-prevent
-            className="bg-gray-900 rounded-xl shadow-2xl lg:w-full w-[90%] max-w-4xl overflow-hidden relative max-h-[90vh] overflow-y-auto"
-          >
-            <div className="flex justify-end p-4">
-              <button
-                onClick={handleCloseModal}
-                className="text-white text-3xl font-bold hover:text-purple-500"
-              >
-                &times;
-              </button>
-            </div>
-
-            <div className="flex flex-col">
-              {/* Video Player at the Top */}
-              {selectedProject.video && (
-                <div className="w-full flex justify-center bg-black px-4 pb-6">
-                  <video
-                    key={selectedProject.video}
-                    controls
-                    className="lg:w-full w-[95%] rounded-xl shadow-2xl"
-                    style={{ maxHeight: '500px' }}
-                  >
-                    <source src={`${import.meta.env.BASE_URL}${selectedProject.video}`} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-              )}
-
-              <div className="lg:p-8 p-6">
-                <h3 className="lg:text-3xl font-bold text-white mb-4 text-md">
-                  {selectedProject.title}
-                </h3>
-                <p className="text-gray-400 mb-6 lg:text-base text-xs">
-                  {selectedProject.description}
-                </p>
-
-                {/* Action Buttons - View Code and View Live */}
-                <div className="flex gap-4 mb-6">
-                  {selectedProject.github && (
-                    <a
-                      href={selectedProject.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-gray-800 hover:bg-gray-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105"
-                    >
-                      View Code
-                    </a>
-                  )}
-                  {selectedProject.webapp && (
-                    <a
-                      href={selectedProject.webapp}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105"
-                    >
-                      View Live
-                    </a>
-                  )}
->>>>>>> aa12ded16b8f921e537f02996261c31526b98b20
                 </div>
               </div>
             </div>
