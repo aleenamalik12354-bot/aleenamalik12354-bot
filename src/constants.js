@@ -34,6 +34,7 @@ import wildlifePic from './assets/aleena_assets/wild.png';
 // Certificates & Logos
 import hexCertificate from './assets/aleena_assets/hexsoftwareinternshipcertificate.jpeg';
 import codeAlphaCertificate from './assets/aleena_assets/codealphacertificate.png';
+import caprigsoftCertificate from './assets/aleena_assets/caprigsoftcertificate.png';
 import codeAlphaLogo from './assets/aleena_assets/codealphalogo.png';
 import hexSoftwareLogo from './assets/aleena_assets/hexsoftwarelogo.png';
 
@@ -151,6 +152,11 @@ export const certificates = [
     id: 1,
     title: "Code Alpha Internship Certificate",
     image: codeAlphaCertificate,
+  },
+  {
+    id: 2,
+    title: "Caprigsoft Training Certificate",
+    image: caprigsoftCertificate,
   },
 ];
 
