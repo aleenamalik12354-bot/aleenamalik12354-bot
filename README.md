@@ -65,10 +65,12 @@ I am a passionate **Full Stack Developer** with expertise in building scalable w
 
 ### 🤝 Let's Connect!
 
-If you'd like to collaborate on a project or just say hi, feel free to reach out.
-
-[<img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" />](mailto:aleenamalik12354@gmail.com)
-[<img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" />](https://github.com/aleenamalik12354-bot)
+[![Portfolio](https://img.shields.io/badge/🌐_PORTFOLIO-8245ec?style=for-the-badge&logoColor=white)](https://aleenamalik12354-bot-bfcb.vercel.app)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aleena-malik-464914399/)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/923120577910)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/rummi_055)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:aleenamalik12354@gmail.com)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/aleenamalik12354-bot)
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=8245ec&height=100&section=footer"/>
 
