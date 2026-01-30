@@ -66,26 +66,26 @@ I am a passionate **Full Stack Developer** with expertise in building scalable w
 ### 🤝 Let's Connect!
 
 <p align="center">
-  <a href="https://aleenamalik12354-bot-bfcb.vercel.app">
-    <img src="https://img.shields.io/badge/🌐_PORTFOLIO-8245ec?style=for-the-badge&logoColor=white" alt="Portfolio"/>
+  <a href="https://aleenamalik12354-bot-bfcb.vercel.app" target="_blank">
+    <img src="https://img.shields.io/badge/▲_START_PORTFOLIO_WEBSITE-FF5722?style=for-the-badge&logoColor=white" alt="Portfolio" height="40"/>
   </a>
-  <a href="https://www.linkedin.com/in/aleena-malik-464914399/">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+  <a href="https://www.linkedin.com/in/aleena-malik-464914399/" target="_blank">
+    <img src="https://img.shields.io/badge/CONNECT_ON_LINKEDIN-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" height="40"/>
   </a>
-  <a href="https://github.com/aleenamalik12354-bot">
-    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+  <a href="mailto:aleenamalik12354@gmail.com" target="_blank">
+    <img src="https://img.shields.io/badge/📧_EMAIL-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" height="40"/>
   </a>
 </p>
 
 <p align="center">
-  <a href="https://wa.me/923120577910">
-    <img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp"/>
+  <a href="https://wa.me/923120577910" target="_blank">
+    <img src="https://img.shields.io/badge/💬_WHATSAPP-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp" height="40"/>
   </a>
-  <a href="https://instagram.com/rummi_055">
-    <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"/>
+  <a href="https://instagram.com/rummi_055" target="_blank">
+    <img src="https://img.shields.io/badge/📷_INSTAGRAM-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" height="40"/>
   </a>
-  <a href="mailto:aleenamalik12354@gmail.com">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
+  <a href="https://github.com/aleenamalik12354-bot" target="_blank">
+    <img src="https://img.shields.io/badge/💻_GITHUB-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" height="40"/>
   </a>
 </p>
 
