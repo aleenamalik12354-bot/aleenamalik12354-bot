@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { certificates } from "../../constants";
 import { motion } from "framer-motion";
+import { useLanguage } from "../../context/LanguageContext";
 
 const Certificates = () => {
     const [selectedCertificate, setSelectedCertificate] = useState(null);
+    const { t } = useLanguage();
 
     const handleOpenModal = (certificate) => {
         setSelectedCertificate(certificate);
@@ -26,9 +28,9 @@ const Certificates = () => {
                 viewport={{ once: false, amount: 0.3 }}
                 className="text-center mb-16 px-[7vw]"
             >
-                <h2 className="text-4xl font-bold text-white">CERTIFICATES</h2>
+                <h2 className="text-4xl font-bold text-[var(--text-primary)]">{t('certificates.title')}</h2>
                 <div className="w-32 h-1 bg-purple-500 mx-auto mt-4"></div>
-                <p className="text-gray-400 mt-4 text-lg font-semibold">
+                <p className="text-[var(--text-secondary)] mt-4 text-lg font-semibold">
                     My professional certifications and achievements
                 </p>
             </motion.div>
@@ -42,18 +44,13 @@ const Certificates = () => {
                 className="relative w-full max-w-7xl mx-auto px-4"
             >
                 <div className="flex flex-wrap justify-center gap-8">
-                    {/* Note: Adjust grid to 2 cols if only 2 certs are expected, or keep 3 for standard consistency */}
-                    {/* User requested "project kasa card banayo", I'll use grid-cols-3 like Projects for consistency if space allows, or fit to existing entries */}
-                    {/* Given currently only 2 certifications, centering them in a 3-col grid might look odd or fine. I will force 2 col or just use standard responsive grid. */}
-                    {/* I'll stick to the exact project structure: grid-cols-1 md:grid-cols-2 lg:grid-cols-3 */}
-
                     {certificates.map((certificate) => (
                         <motion.div
                             key={certificate.id}
                             onClick={() => handleOpenModal(certificate)}
                             whileHover={{ scale: 1.05, y: -10, boxShadow: "0 20px 30px -10px rgba(130, 69, 236, 0.5)" }}
                             transition={{ type: "spring", stiffness: 200, damping: 20 }}
-                            className="w-full max-w-[400px] border border-white bg-gray-900 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden cursor-pointer"
+                            className="w-full max-w-[400px] border border-[var(--border-color)] bg-[var(--card-bg)] backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden cursor-pointer"
                         >
                             <div className="p-4">
                                 <img
@@ -63,19 +60,17 @@ const Certificates = () => {
                                 />
                             </div>
                             <div className="p-6">
-                                <h3 className="text-xl font-bold text-white mb-2 truncate">
+                                <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2 truncate">
                                     {certificate.title}
                                 </h3>
-                                {/* Since certificates might not have a long description in current constants, we can display a generic one or the title again if needed. 
-                      However project cards have a description. If cert data lacks description, I'll hide it or use title. */}
-                                <p className="text-gray-500 mb-2 pt-2 line-clamp-2 text-sm">
+                                <p className="text-[var(--text-secondary)] mb-2 pt-2 line-clamp-2 text-sm">
                                     Professional Certification
                                 </p>
                                 <div className="flex flex-wrap gap-2 mt-2">
-                                    <span className="text-xs bg-purple-900 text-purple-200 px-2 py-1 rounded-full">
+                                    <span className="text-xs bg-purple-900/50 text-purple-200 px-2 py-1 rounded-full">
                                         Verified
                                     </span>
-                                    <span className="text-xs bg-purple-900 text-purple-200 px-2 py-1 rounded-full">
+                                    <span className="text-xs bg-purple-900/50 text-purple-200 px-2 py-1 rounded-full">
                                         Achievement
                                     </span>
                                 </div>

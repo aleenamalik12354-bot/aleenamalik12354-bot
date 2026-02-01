@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import ThemeToggle from "../ThemeToggle/ThemeToggle";
+import LanguageSelector from "../LanguageSelector/LanguageSelector";
+import { useLanguage } from "../../context/LanguageContext";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
   const [isScrolled, setIsScrolled] = useState(false);
+  const { t } = useLanguage();
 
   // Detect scroll and change navbar background
   useEffect(() => {
@@ -36,11 +40,11 @@ const Navbar = () => {
   };
 
   const menuItems = [
-    { id: "about", label: "About" },
-    { id: "skills", label: "Skills" },
-    { id: "experience", label: "Experience" },
-    { id: "work", label: "Projects" },
-    { id: "education", label: "Education" },
+    { id: "about", label: t('nav.about') },
+    { id: "skills", label: t('nav.skills') },
+    { id: "experience", label: t('nav.experience') },
+    { id: "work", label: t('nav.projects') },
+    { id: "education", label: t('nav.education') },
   ];
 
   return (
@@ -73,8 +77,10 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Social Icons */}
-        <div className="hidden md:flex space-x-4">
+        {/* Social Icons & Theme/Language Toggles */}
+        <div className="hidden md:flex space-x-4 items-center">
+          <LanguageSelector />
+          <ThemeToggle />
           <a
             href="https://github.com/aleenamalik12354-bot"
             target="_blank"
@@ -124,6 +130,12 @@ const Navbar = () => {
                 </button>
               </li>
             ))}
+            <div className="flex flex-col items-center space-y-4 pt-2 border-t border-gray-700 w-full">
+              <div className="flex space-x-4 items-center">
+                <LanguageSelector />
+                <ThemeToggle />
+              </div>
+            </div>
             <div className="flex space-x-4">
               <a
                 href="https://github.com/aleenamalik12354-bot"

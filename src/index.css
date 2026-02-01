@@ -45,3 +45,95 @@ html.lenis body {
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
 }
+
+/* Theme Toggle Button Styles */
+.theme-toggle-btn {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.light-theme .theme-toggle-btn {
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+/* Smooth theme transitions */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Light theme specific overrides - Premium Clean Look */
+/* --- Premium Theme System --- */
+
+/* 1. Deep Dark (Original Enhanced) */
+.deep-dark {
+  --primary-bg: #0a0a0a;
+  --secondary-bg: #1a1a1a;
+  --text-primary: #ffffff;
+  --text-secondary: #9ca3af;
+  --accent-color: #8245ec;
+  --card-bg: rgba(20, 20, 30, 0.85);
+  --border-color: rgba(255, 255, 255, 0.1);
+  --glass-blur: 12px;
+}
+
+/* 2. Elegant Light (Premium Soft) */
+.elegant-light {
+  --primary-bg: #fafafa;
+  --secondary-bg: #f4f4f5;
+  --text-primary: #18181b;
+  --text-secondary: #52525b;
+  --accent-color: #7c3aed;
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --border-color: #e4e4e7;
+  --glass-blur: 8px;
+}
+
+/* 3. Glassmorphism Light (Modern & Airy) */
+.glass-morphism {
+  /* Using a subtle gradient for depth */
+  --primary-bg: radial-gradient(circle at top left, #e0f2fe, #f0fdf4);
+  --secondary-bg: rgba(255, 255, 255, 0.4);
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --accent-color: #0ea5e9;
+  --card-bg: rgba(255, 255, 255, 0.35);
+  /* High transparency */
+  --border-color: rgba(255, 255, 255, 0.6);
+  --glass-blur: 20px;
+}
+
+/* 4. Pastel Pro (Creative & Soft) */
+.pastel-pro {
+  --primary-bg: #fff1f2;
+  /* Soft Rose */
+  --secondary-bg: #fff7ed;
+  --text-primary: #4a044e;
+  --text-secondary: #be185d;
+  --accent-color: #f43f5e;
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --border-color: #fecdd3;
+  --glass-blur: 0px;
+}
+
+/* 5. Cyber Midnight (Futuristic) */
+.cyber-midnight {
+  --primary-bg: #020617;
+  /* Slate-950 */
+  --secondary-bg: #0f172a;
+  --text-primary: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --accent-color: #00ff9d;
+  /* Neon Green */
+  --card-bg: rgba(5, 5, 10, 0.95);
+  --border-color: #00ff9d;
+  /* Neon Borders */
+  --glass-blur: 4px;
+}
+
+/* Apply variables */
+body {
+  background-color: var(--primary-bg);
+  color: var(--text-primary);
+}

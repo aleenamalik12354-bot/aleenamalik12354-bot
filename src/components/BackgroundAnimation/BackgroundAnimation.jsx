@@ -1,7 +1,9 @@
 import React, { useEffect, useRef } from "react";
+import { useTheme } from "../../context/ThemeContext";
 
 const BackgroundAnimation = () => {
     const canvasRef = useRef(null);
+    const { theme } = useTheme();
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -21,18 +23,55 @@ const BackgroundAnimation = () => {
             constructor() {
                 this.x = Math.random() * canvas.width;
                 this.y = Math.random() * canvas.height;
-                this.size = Math.random() * 2 + 0.5; // Small glowing stars
-                this.speedX = (Math.random() - 0.5) * 0.5; // Slow float horizontal
-                this.speedY = (Math.random() - 0.5) * 0.5; // Slow float vertical
-                this.opacity = Math.random() * 0.5 + 0.3; // Varying opacity
-                this.color = `rgba(147, 51, 234, ${this.opacity})`; // Purple/Violet tint based on portfolio theme
+                // Varying sizes
+                this.size = Math.random() * 10 + 2;
+                this.speedX = (Math.random() - 0.5) * 1.5;
+                this.speedY = (Math.random() - 0.5) * 1.5;
+
+                let themeColors = [];
+                let themeOpacityBase = 0.5;
+                let themeShadowOpacity = 0.5;
+
+                switch (theme) {
+                    case 'elegant-light':
+                        themeColors = ['124, 58, 237', '37, 99, 235', '219, 39, 119', '13, 148, 136', '234, 88, 12'];
+                        themeOpacityBase = 0.6;
+                        themeShadowOpacity = 0.4;
+                        break;
+                    case 'glass-morphism':
+                        themeColors = ['255, 255, 255', '56, 189, 248', '168, 85, 247']; // White, Sky, Purple
+                        themeOpacityBase = 0.3; // Subtle
+                        themeShadowOpacity = 0.2;
+                        break;
+                    case 'pastel-pro':
+                        themeColors = ['251, 113, 133', '244, 114, 182', '192, 132, 252', '96, 165, 250']; // Pastel tones
+                        themeOpacityBase = 0.6;
+                        themeShadowOpacity = 0.3;
+                        break;
+                    case 'cyber-midnight':
+                        themeColors = ['0, 255, 157', '34, 211, 238', '232, 121, 249', '250, 204, 21']; // Neon
+                        themeOpacityBase = 0.8;
+                        themeShadowOpacity = 1.0;
+                        break;
+                    case 'deep-dark':
+                    default:
+                        themeColors = ['147, 51, 234', '59, 130, 246', '236, 72, 153', '52, 211, 153'];
+                        themeOpacityBase = 0.75; // Increased for better visibility
+                        themeShadowOpacity = 0.9;
+                        break;
+                }
+
+                this.opacity = themeOpacityBase + Math.random() * 0.3;
+
+                const randomColor = themeColors[Math.floor(Math.random() * themeColors.length)];
+                this.color = `rgba(${randomColor}, ${this.opacity})`;
+                this.shadowColor = `rgba(${randomColor}, ${themeShadowOpacity})`;
             }
 
             update() {
                 this.x += this.speedX;
                 this.y += this.speedY;
 
-                // Bounce off edges
                 if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
                 if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
             }
@@ -41,52 +80,29 @@ const BackgroundAnimation = () => {
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
                 ctx.fillStyle = this.color;
-                ctx.shadowBlur = 8; // Glow effect
-                ctx.shadowColor = "rgba(147, 51, 234, 0.8)";
+                // Extra glow for cyber theme
+                ctx.shadowBlur = theme === 'cyber-midnight' ? 20 : 10;
+                ctx.shadowColor = this.shadowColor;
                 ctx.fill();
-                ctx.shadowBlur = 0; // Reset for performance
+                ctx.shadowBlur = 0;
             }
         }
 
         const initParticles = () => {
             particles = [];
-            const numberOfParticles = Math.floor((canvas.width * canvas.height) / 9000); // Responsive particle count
+            const numberOfParticles = Math.floor((canvas.width * canvas.height) / 9000);
             for (let i = 0; i < numberOfParticles; i++) {
                 particles.push(new Particle());
             }
         };
 
         const animate = () => {
-            ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear screen
-
-            // Draw deep space background
-            // We use the CSS background usually, but here we just draw particles over it.
-            // If we need a specific background color, we can set it in CSS.
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
 
             particles.forEach((particle) => {
                 particle.update();
                 particle.draw();
             });
-
-            // Connect particles with thin lines if they are close (Optional Constellation Effect)
-            // Kept commented out to match "freely floating" request, can be enabled if desired.
-            /*
-            particles.forEach((a, index) => {
-                particles.slice(index + 1).forEach(b => {
-                    const dx = a.x - b.x;
-                    const dy = a.y - b.y;
-                    const distance = Math.sqrt(dx * dx + dy * dy);
-                    if (distance < 100) {
-                        ctx.beginPath();
-                        ctx.strokeStyle = `rgba(147, 51, 234, ${0.1 * (1 - distance/100)})`;
-                        ctx.lineWidth = 0.5;
-                        ctx.moveTo(a.x, a.y);
-                        ctx.lineTo(b.x, b.y);
-                        ctx.stroke();
-                    }
-                });
-            });
-            */
 
             animationFrameId = requestAnimationFrame(animate);
         };
@@ -99,17 +115,19 @@ const BackgroundAnimation = () => {
             window.removeEventListener("resize", resizeCanvas);
             cancelAnimationFrame(animationFrameId);
         };
-    }, []);
+    }, [theme]);
 
     return (
-        <div className="fixed inset-0 z-[-1] overflow-hidden bg-[#0a0a0a]">
-            {/* Subtle Gradient Backdrop for depth */}
-            <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900 opacity-90"></div>
+        <div className="fixed inset-0 z-0 overflow-hidden transition-colors duration-500 bg-[var(--primary-bg)]">
+            {/* Overlay adjustments based on theme */}
+            <div className={`absolute inset-0 transition-opacity duration-1000 ${theme === 'deep-dark' ? 'bg-gradient-to-br from-gray-900 via-black to-gray-900 opacity-90' :
+                theme === 'cyber-midnight' ? 'bg-[#050510] opacity-80' :
+                    'bg-transparent opacity-0'
+                }`}></div>
             <canvas
                 ref={canvasRef}
                 className="block w-full h-full relative z-10"
             />
-
         </div>
     );
 };

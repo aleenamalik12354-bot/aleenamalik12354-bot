@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { projects } from "../../constants";
 import { motion } from "framer-motion";
+import { useLanguage } from "../../context/LanguageContext";
 
 const Work = () => {
   const [selectedProject, setSelectedProject] = useState(null);
+  const { t } = useLanguage();
 
   const handleOpenModal = (project) => {
     setSelectedProject(project);
@@ -26,9 +28,9 @@ const Work = () => {
         viewport={{ once: false, amount: 0.3 }}
         className="text-center mb-16 px-[7vw]"
       >
-        <h2 className="text-4xl font-bold text-white">PROJECTS</h2>
+        <h2 className="text-4xl font-bold text-[var(--text-primary)]">{t('projects.title')}</h2>
         <div className="w-32 h-1 bg-purple-500 mx-auto mt-4"></div>
-        <p className="text-gray-400 mt-4 text-lg font-semibold">
+        <p className="text-[var(--text-secondary)] mt-4 text-lg font-semibold">
           Here are some of my projects
         </p>
       </motion.div>
@@ -48,7 +50,7 @@ const Work = () => {
               onClick={() => handleOpenModal(project)}
               whileHover={{ scale: 1.05, y: -10, boxShadow: "0 20px 30px -10px rgba(130, 69, 236, 0.5)" }}
               transition={{ type: "spring", stiffness: 200, damping: 20 }}
-              className="w-full max-w-[400px] border border-white bg-gray-900 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden cursor-pointer"
+              className="w-full max-w-[400px] border border-[var(--border-color)] bg-[var(--card-bg)] backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden cursor-pointer"
             >
               <div className="p-4">
                 <img
@@ -58,17 +60,17 @@ const Work = () => {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-2 truncate">
+                <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2 truncate">
                   {project.title}
                 </h3>
-                <p className="text-gray-500 mb-2 pt-2 line-clamp-2 text-sm">
+                <p className="text-[var(--text-secondary)] mb-2 pt-2 line-clamp-2 text-sm">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mt-2">
                   {project.tags.map((tag, index) => (
                     <span
                       key={index}
-                      className="text-xs bg-purple-900 text-purple-200 px-2 py-1 rounded-full"
+                      className="text-xs bg-purple-900/50 text-purple-200 px-2 py-1 rounded-full"
                     >
                       {tag}
                     </span>

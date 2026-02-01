@@ -12,8 +12,11 @@ import BackgroundAnimation from "./components/BackgroundAnimation/BackgroundAnim
 import ScrollProgress from "./components/ScrollProgress/ScrollProgress";
 import BackToTop from "./components/BackToTop/BackToTop";
 import Lenis from 'lenis';
+import { useTheme } from "./context/ThemeContext";
 
 export default function App() {
+  const { theme } = useTheme();
+
   useEffect(() => {
     const lenis = new Lenis({
       duration: 0.6, // Snappier scroll duration
@@ -40,7 +43,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="bg-primary text-white min-h-screen relative">
+    <div className="min-h-screen relative transition-colors duration-500 text-[var(--text-primary)]">
       <ScrollProgress />
       <BackgroundAnimation />
       <Navbar />

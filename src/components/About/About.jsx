@@ -4,9 +4,12 @@ import Tilt from 'react-parallax-tilt';
 import { motion } from 'framer-motion';
 import profileImage from '../../assets/aleena_assets/aleena_picture.jpg';
 import CVModal from '../CVModal/CVModal';
+import { useLanguage } from '../../context/LanguageContext';
 
 const About = () => {
   const [isCVModalOpen, setIsCVModalOpen] = useState(false);
+  const { t } = useLanguage();
+
   return (
     <section
       id="about"
@@ -22,23 +25,21 @@ const About = () => {
           className="md:w-1/2 text-center md:text-left"
         >
           {/* Greeting */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2 leading-tight">
-            Hi, I am
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[var(--text-primary)] mb-2 leading-tight">
+            {t('hero.greeting')}
           </h1>
           {/* Name */}
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[var(--text-primary)] mb-4 leading-tight">
             Aleena Malik
           </h2>
           {/* Skills Heading with Typing Effect */}
           <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 text-[#8245ec] leading-tight">
-            <span className="text-white">I am a </span>
+            <span className="text-[var(--text-primary)]">I am a </span>
             <ReactTypingEffect
               text={[
-                'Full Stack Web Developer',
+                'Front End Developer',
                 'Web Developer',
-                'Data Analyst',
-                'Machine Learning Engineer',
-                'BS IT Student',
+                'UI/UX Designer',
               ]}
               speed={100}
               eraseSpeed={50}
@@ -50,11 +51,8 @@ const About = () => {
             />
           </h3>
           {/* About Me Paragraph */}
-          <p className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 mt-8 leading-relaxed">
-            I am a BS IT student passionate about web development, data analysis, and machine learning.
-            I have worked on various projects including college websites, result management systems,
-            and machine learning applications for malware detection. Proficient in HTML, CSS, JavaScript,
-            Python, and PowerBI, I love creating innovative solutions to real-world problems.
+          <p className="text-base sm:text-lg md:text-lg text-[var(--text-secondary)] mb-10 mt-8 leading-relaxed">
+            {t('about.description')}
           </p>
           {/* Contact Button */}
           <div className="flex flex-wrap gap-4 mt-8">
@@ -73,7 +71,7 @@ const About = () => {
                 document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
               }}
             >
-              CONTACT ME
+              {t('hero.contact')}
             </motion.a>
 
             <motion.button
@@ -81,9 +79,9 @@ const About = () => {
               whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(130, 69, 236, 0.5)" }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              className="inline-block text-white py-3 px-8 rounded-full text-lg font-bold transition duration-300 border-2 border-[#8245ec] bg-transparent hover:bg-[#8245ec]/10"
+              className="inline-block text-[var(--text-primary)] py-3 px-8 rounded-full text-lg font-bold transition duration-300 border-2 border-[#8245ec] bg-transparent hover:bg-[#8245ec]/10"
             >
-              VIEW CV
+              {t('hero.resume')}
             </motion.button>
           </div>
         </motion.div>

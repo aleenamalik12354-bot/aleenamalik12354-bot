@@ -1,7 +1,9 @@
 import React from "react";
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaYoutube, FaGithub, FaWhatsapp } from "react-icons/fa";
+import { useLanguage } from "../../context/LanguageContext";
 
 const Footer = () => {
+  const { t } = useLanguage();
   // Smooth scroll function
   const handleScroll = (sectionId) => {
     const section = document.getElementById(sectionId);
@@ -11,7 +13,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="text-white py-8 px-[12vw] md:px-[7vw] lg:px-[20vw]">
+    <footer className="text-[var(--text-primary)] py-8 px-[12vw] md:px-[7vw] lg:px-[20vw]">
       <div className="container mx-auto text-center">
         {/* Name / Logo */}
         <h2 className="text-xl font-semibold text-purple-500">Aleena Malik</h2>
@@ -19,11 +21,11 @@ const Footer = () => {
         {/* Navigation Links - Responsive */}
         <nav className="flex flex-wrap justify-center space-x-4 sm:space-x-6 mt-4">
           {[
-            { name: "About", id: "about" },
-            { name: "Skills", id: "skills" },
-            { name: "Experience", id: "experience" },
-            { name: "Projects", id: "work" },
-            { name: "Education", id: "education" },
+            { name: t('nav.about'), id: "about" },
+            { name: t('nav.skills'), id: "skills" },
+            { name: t('nav.experience'), id: "experience" },
+            { name: t('nav.projects'), id: "work" },
+            { name: t('nav.education'), id: "education" },
           ].map((item, index) => (
             <button
               key={index}
@@ -57,8 +59,8 @@ const Footer = () => {
         </div>
 
         {/* Copyright Text */}
-        <p className="text-sm text-gray-400 mt-6">
-          © 2025 Aleena Malik. All rights reserved.
+        <p className="text-sm text-[var(--text-secondary)] mt-6">
+          © 2025 Aleena Malik. {t('footer.rights')}
         </p>
       </div>
     </footer>
