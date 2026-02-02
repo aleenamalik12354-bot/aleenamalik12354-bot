@@ -61,7 +61,7 @@ const Education = () => {
             <motion.div
               whileHover={{ scale: 1.05, boxShadow: "0 0 25px rgba(130, 69, 236, 0.6)" }}
               transition={{ type: "spring", stiffness: 200, damping: 20 }}
-              className={`w-full sm:max-w-md p-4 sm:p-8 rounded-2xl shadow-2xl border border-[var(--border-color)] bg-[var(--card-bg)] backdrop-blur-md shadow-[0_0_20px_1px_rgba(130,69,236,0.1)] ${index % 2 === 0 ? "sm:ml-0" : "sm:mr-0"
+              className={`w-full sm:max-w-md p-4 sm:p-8 rounded-2xl shadow-2xl border-2 border-[#8245ec]/50 hover:border-[#8245ec] transition-colors duration-300 bg-[var(--card-bg)] backdrop-blur-md shadow-[0_0_20px_1px_rgba(130,69,236,0.1)] ${index % 2 === 0 ? "sm:ml-0" : "sm:mr-0"
                 } sm:ml-44 sm:mr-44 ml-8 transform transition-transform duration-300`}
             >
               {/* Flex container for image and text */}

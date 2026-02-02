@@ -44,7 +44,9 @@ const Navbar = () => {
     { id: "skills", label: t('nav.skills') },
     { id: "experience", label: t('nav.experience') },
     { id: "work", label: t('nav.projects') },
+    { id: "certificates", label: t('nav.certificates') },
     { id: "education", label: t('nav.education') },
+    { id: "contact", label: t('nav.contact') },
   ];
 
   return (
@@ -54,7 +56,7 @@ const Navbar = () => {
     >
       <div className="text-white py-5 flex justify-between items-center">
         {/* Logo */}
-        <div className="text-lg font-semibold cursor-pointer">
+        <div className="text-lg font-semibold cursor-pointer" onClick={() => handleMenuItemClick("about")}>
           <span className="text-[#8245ec]">&lt;</span>
           <span className="text-white">Aleena</span>
           <span className="text-[#8245ec]">/</span>
@@ -117,26 +119,26 @@ const Navbar = () => {
 
       {/* Mobile Menu Items */}
       {isOpen && (
-        <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-4/5 bg-[#050414] bg-opacity-50 backdrop-filter backdrop-blur-lg z-50 rounded-lg shadow-lg md:hidden">
-          <ul className="flex flex-col items-center space-y-4 py-4 text-gray-300">
+        <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-4/5 max-h-[85vh] overflow-y-auto bg-[#050414] bg-opacity-80 backdrop-filter backdrop-blur-xl z-50 rounded-lg shadow-lg md:hidden border border-gray-800 scrollbar-thin scrollbar-thumb-[#8245ec] scrollbar-track-transparent">
+          <ul className="flex flex-col items-center space-y-4 py-6 text-gray-300">
             {menuItems.map((item) => (
               <li
                 key={item.id}
-                className={`cursor-pointer hover:text-white ${activeSection === item.id ? "text-[#8245ec]" : ""
+                className={`cursor-pointer hover:text-white text-lg ${activeSection === item.id ? "text-[#8245ec]" : ""
                   }`}
               >
-                <button onClick={() => handleMenuItemClick(item.id)}>
+                <button onClick={() => handleMenuItemClick(item.id)} className="w-full text-center py-1 px-4">
                   {item.label}
                 </button>
               </li>
             ))}
-            <div className="flex flex-col items-center space-y-4 pt-2 border-t border-gray-700 w-full">
-              <div className="flex space-x-4 items-center">
+            <div className="flex flex-col items-center space-y-4 pt-4 border-t border-gray-700 w-full">
+              <div className="flex space-x-4 items-center justify-center">
                 <LanguageSelector />
                 <ThemeToggle />
               </div>
             </div>
-            <div className="flex space-x-4">
+            <div className="flex space-x-6 pb-2">
               <a
                 href="https://github.com/aleenamalik12354-bot"
                 target="_blank"

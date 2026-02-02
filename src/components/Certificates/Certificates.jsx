@@ -50,7 +50,7 @@ const Certificates = () => {
                             onClick={() => handleOpenModal(certificate)}
                             whileHover={{ scale: 1.05, y: -10, boxShadow: "0 20px 30px -10px rgba(130, 69, 236, 0.5)" }}
                             transition={{ type: "spring", stiffness: 200, damping: 20 }}
-                            className="w-full max-w-[400px] border border-[var(--border-color)] bg-[var(--card-bg)] backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden cursor-pointer"
+                            className="w-full max-w-[400px] border-2 border-[#8245ec]/50 hover:border-[#8245ec] transition-colors duration-300 bg-[var(--card-bg)] backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden cursor-pointer"
                         >
                             <div className="p-4">
                                 <img

@@ -6,6 +6,7 @@ export const translations = {
             experience: "Experience",
             projects: "Projects",
             education: "Education",
+            certificates: "Certificates",
             contact: "Contact"
         },
         hero: {
@@ -62,6 +63,7 @@ export const translations = {
             experience: "تجربہ",
             projects: "منصوبے",
             education: "تعلیم",
+            certificates: "سرٹیفکیٹس",
             contact: "رابطہ"
         },
         hero: {
@@ -118,6 +120,7 @@ export const translations = {
             experience: "Erfarenhet",
             projects: "Projekt",
             education: "Utbildning",
+            certificates: "Certifikat",
             contact: "Kontakt"
         },
         hero: {
@@ -174,6 +177,7 @@ export const translations = {
             experience: "Deneyim",
             projects: "Projeler",
             education: "Eğitim",
+            certificates: "Sertifikalar",
             contact: "İletişim"
         },
         hero: {
@@ -230,6 +234,7 @@ export const translations = {
             experience: "Experiencia",
             projects: "Proyectos",
             education: "Educación",
+            certificates: "Certificados",
             contact: "Contacto"
         },
         hero: {
@@ -286,6 +291,7 @@ export const translations = {
             experience: "Expérience",
             projects: "Projets",
             education: "Éducation",
+            certificates: "Certificats",
             contact: "Contact"
         },
         hero: {
@@ -342,6 +348,7 @@ export const translations = {
             experience: "Erfahrung",
             projects: "Projekte",
             education: "Ausbildung",
+            certificates: "Zertifikate",
             contact: "Kontakt"
         },
         hero: {
@@ -398,6 +405,7 @@ export const translations = {
             experience: "经验",
             projects: "项目",
             education: "教育",
+            certificates: "证书",
             contact: "联系"
         },
         hero: {
@@ -454,6 +462,7 @@ export const translations = {
             experience: "الخبرة",
             projects: "المشاريع",
             education: "التعليم",
+            certificates: "الشهادات",
             contact: "اتصل"
         },
         hero: {
@@ -510,6 +519,7 @@ export const translations = {
             experience: "अनुभव",
             projects: "परियोजनाएं",
             education: "शिक्षा",
+            certificates: "प्रमाणपत्र",
             contact: "संपर्क"
         },
         hero: {
@@ -566,6 +576,7 @@ export const translations = {
             experience: "Опыт",
             projects: "Проекты",
             education: "Образование",
+            certificates: "Сертификаты",
             contact: "Контакты"
         },
         hero: {

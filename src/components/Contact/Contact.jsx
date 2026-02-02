@@ -98,7 +98,7 @@ const Contact = () => {
         {/* Left Column: Contact Info Cards */}
         <motion.div variants={itemVariants} className="flex flex-col gap-6">
           {/* Email Card */}
-          <div className="group bg-[var(--card-bg)] backdrop-blur-xl p-8 rounded-2xl border border-[var(--border-color)] hover:border-purple-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(147,51,234,0.15)] flex flex-col justify-center h-full">
+          <div className="group bg-[var(--card-bg)] backdrop-blur-xl p-8 rounded-2xl border-2 border-[#8245ec]/50 hover:border-[#8245ec] transition-all duration-300 hover:shadow-[0_0_30px_rgba(147,51,234,0.15)] flex flex-col justify-center h-full">
             <div className="flex items-center gap-5">
               <div className="w-14 h-14 rounded-full bg-gradient-to-tr from-[#8245ec] to-[#d946ef] flex items-center justify-center text-white text-2xl shadow-lg group-hover:scale-110 transition-transform duration-300">
                 <FaEnvelope />
@@ -113,7 +113,7 @@ const Contact = () => {
           </div>
 
           {/* Location Card */}
-          <div className="group bg-[var(--card-bg)] backdrop-blur-xl p-8 rounded-2xl border border-[var(--border-color)] hover:border-purple-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(147,51,234,0.15)] flex flex-col justify-center h-full">
+          <div className="group bg-[var(--card-bg)] backdrop-blur-xl p-8 rounded-2xl border-2 border-[#8245ec]/50 hover:border-[#8245ec] transition-all duration-300 hover:shadow-[0_0_30px_rgba(147,51,234,0.15)] flex flex-col justify-center h-full">
             <div className="flex items-center gap-5">
               <div className="w-14 h-14 rounded-full bg-gradient-to-tr from-[#8245ec] to-[#d946ef] flex items-center justify-center text-white text-2xl shadow-lg group-hover:scale-110 transition-transform duration-300">
                 <FaMapMarkerAlt />
@@ -127,7 +127,7 @@ const Contact = () => {
         </motion.div>
 
         {/* Middle Column: Contact Form */}
-        <motion.div variants={itemVariants} className="bg-[var(--card-bg)] backdrop-blur-xl p-8 rounded-2xl border border-[var(--border-color)] shadow-2xl relative overflow-hidden">
+        <motion.div variants={itemVariants} className="bg-[var(--card-bg)] backdrop-blur-xl p-8 rounded-2xl border-2 border-[#8245ec]/50 hover:border-[#8245ec] shadow-2xl relative overflow-hidden">
           <h3 className="text-2xl font-bold text-[var(--text-primary)] mb-6 flex items-center gap-2">
             Send a Message <span className="text-2xl animate-bounce">🚀</span>
           </h3>
@@ -183,7 +183,7 @@ const Contact = () => {
         </motion.div>
 
         {/* Right Column: Map */}
-        <motion.div variants={itemVariants} className="h-full min-h-[400px] lg:min-h-auto bg-[var(--card-bg)] backdrop-blur-xl p-2 rounded-2xl border border-[var(--border-color)] shadow-xl">
+        <motion.div variants={itemVariants} className="h-full min-h-[400px] lg:min-h-auto bg-[var(--card-bg)] backdrop-blur-xl p-2 rounded-2xl border-2 border-[#8245ec]/50 hover:border-[#8245ec] shadow-xl">
           <div className="w-full h-full rounded-xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-500 relative">
             <iframe
               title="Wah Cantt Map"

@@ -9,7 +9,7 @@ const CircularProgress = ({ percentage, title }) => {
   const strokeDashoffset = circumference - (percentage / 100) * circumference;
 
   return (
-    <div className="flex flex-col items-center justify-center p-6 bg-[var(--card-bg)] rounded-xl border border-[var(--border-color)] hover:border-[#8245ec] transition-all duration-300 w-full sm:w-[200px] hover:shadow-[0_0_15px_rgba(130,69,236,0.3)] group">
+    <div className="flex flex-col items-center justify-center p-6 bg-[var(--card-bg)] rounded-xl border-2 border-[#8245ec]/50 hover:border-[#8245ec] transition-all duration-300 w-full sm:w-[200px] hover:shadow-[0_0_15px_rgba(130,69,236,0.3)] group">
       {/* ... (keep existing SVG logic if possible, or just copy it back if I'm lazy, but I should use the tool carefully) ... */}
       <div className="relative w-24 h-24 mb-4">
         {/* Background Circle */}
@@ -83,7 +83,7 @@ const Skills = () => {
           >
             {[...technicalSkills, ...technicalSkills, ...technicalSkills].map((skill, index) => (
               <div key={`tech-${index}`} className="flex flex-col items-center justify-center gap-4 mx-8 sm:mx-12 min-w-[100px] cursor-pointer group/item">
-                <div className="w-20 h-20 sm:w-24 sm:h-24 bg-[var(--card-bg)] rounded-xl flex items-center justify-center border border-[var(--border-color)] hover:border-[#8245ec] hover:shadow-[0_0_15px_rgba(130,69,236,0.5)] transition-all duration-300 relative overflow-hidden">
+                <div className="w-20 h-20 sm:w-24 sm:h-24 bg-[var(--card-bg)] rounded-xl flex items-center justify-center border-2 border-[#8245ec]/50 hover:border-[#8245ec] hover:shadow-[0_0_15px_rgba(130,69,236,0.5)] transition-all duration-300 relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-[#8245ec]/10 to-transparent opacity-100 transition-opacity duration-300"></div>
                   <img src={skill.logo} alt={skill.name} className="w-10 h-10 sm:w-12 sm:h-12 object-contain transition-all duration-300 transform group-hover/item:scale-110" />
                 </div>
