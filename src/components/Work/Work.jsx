@@ -26,7 +26,7 @@ const Work = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1.0] }}
         viewport={{ once: false, amount: 0.3 }}
-        className="text-center mb-16 px-[7vw]"
+        className="text-center mb-16 px-6 md:px-[7vw]"
       >
         <h2 className="text-4xl font-bold text-[var(--text-primary)]">{t('projects.title')}</h2>
         <div className="w-32 h-1 bg-purple-500 mx-auto mt-4"></div>
@@ -43,7 +43,7 @@ const Work = () => {
         viewport={{ once: true, amount: 0.1 }}
         className="relative w-full max-w-7xl mx-auto px-4"
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 justify-items-center">
           {projects.map((project) => (
             <motion.div
               key={project.id}
@@ -106,7 +106,7 @@ const Work = () => {
               <div className="flex flex-col">
                 {/* Video Player at the Top */}
                 {selectedProject.video && (
-                  <div className="w-full flex justify-center bg-black px-4 pb-6 pt-12">
+                  <div className="w-full flex justify-center bg-black px-4 pb-6 pt-12 sm:pt-6">
                     <video
                       key={selectedProject.video}
                       controls
@@ -120,21 +120,21 @@ const Work = () => {
                 )}
 
                 <div className="lg:p-8 p-6">
-                  <h3 className="lg:text-3xl font-bold text-white mb-4 text-md">
+                  <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4">
                     {selectedProject.title}
                   </h3>
-                  <p className="text-gray-400 mb-6 lg:text-base text-sm leading-relaxed">
+                  <p className="text-gray-400 mb-6 text-sm lg:text-base leading-relaxed">
                     {selectedProject.description}
                   </p>
 
                   {/* Action Buttons - View Code and View Live */}
-                  <div className="flex gap-4 mb-6">
+                  <div className="flex flex-col sm:flex-row gap-4 mb-6">
                     {selectedProject.github && (
                       <a
                         href={selectedProject.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-gray-800 hover:bg-gray-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105"
+                        className="bg-gray-800 hover:bg-gray-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 text-center"
                       >
                         View Code
                       </a>
@@ -144,7 +144,7 @@ const Work = () => {
                         href={selectedProject.webapp}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105"
+                        className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 text-center"
                       >
                         View Live
                       </a>

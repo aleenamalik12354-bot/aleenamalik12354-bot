@@ -13,7 +13,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="text-[var(--text-primary)] py-8 px-[12vw] md:px-[7vw] lg:px-[20vw]">
+    <footer className="text-[var(--text-primary)] py-12 px-6 md:px-[7vw] lg:px-[20vw] bg-black/20 backdrop-blur-sm border-t border-[var(--border-color)]">
       <div className="container mx-auto text-center">
         {/* Name / Logo */}
         <h2 className="text-xl font-semibold text-purple-500">Aleena Malik</h2>

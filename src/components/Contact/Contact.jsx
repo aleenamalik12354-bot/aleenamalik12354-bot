@@ -63,7 +63,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="py-24 px-[7vw] lg:px-[10vw] relative bg-transparent overflow-hidden font-sans"
+      className="py-24 px-6 md:px-[7vw] lg:px-[10vw] relative bg-transparent overflow-hidden font-sans"
     >
       <ToastContainer />
 

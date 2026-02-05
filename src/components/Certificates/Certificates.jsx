@@ -26,7 +26,7 @@ const Certificates = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1.0] }}
                 viewport={{ once: false, amount: 0.3 }}
-                className="text-center mb-16 px-[7vw]"
+                className="text-center mb-16 px-6 md:px-[7vw]"
             >
                 <h2 className="text-4xl font-bold text-[var(--text-primary)]">{t('certificates.title')}</h2>
                 <div className="w-32 h-1 bg-purple-500 mx-auto mt-4"></div>
