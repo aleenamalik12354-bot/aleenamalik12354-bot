@@ -28,5 +28,8 @@ dist-ssr
 *.sw?
 
 # Video files (LFS)
-public/videos/*.mp4
-*.mp4
+# public/videos/*.mp4
+# *.mp4
+# File is 190MB, exceeds GitHub 100MB limit
+public/newvideos/live_clock.mp4
+public/videos/live_clock.mp4
