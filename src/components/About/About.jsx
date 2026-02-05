@@ -15,7 +15,7 @@ const About = () => {
       id="about"
       className="py-4 px-6 md:px-[7vw] lg:px-[20vw] font-sans pt-32 md:pt-40"
     >
-      <div className="flex flex-col md:flex-row justify-between items-center gap-10 md:gap-0">
+      <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-10 md:gap-0">
         {/* Left Side */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
